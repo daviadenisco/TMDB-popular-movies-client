@@ -1,38 +1,77 @@
 .App {
-  text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: rgb(2, 28, 57);
+  height: 58px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#logo {
+  color: rgb(90, 255, 192);
+  font-weight: bold;
+  font-family: 'Arial';
+  font-size: 35px;
+  padding-top: 10px;
+  padding-left: 20px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-info {
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-gap: 10px;
+  /* grid-auto-rows: minmax(100px, auto); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poster {
+   /* first column, first row: poster */
+   grid-column: 1;
+   grid-row: 1;
+}
+
+.main-info {
+ /* second column, first row: title, rating, release date, overview */
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.cast {
+  /* second row, second column: cast list */
+  background-color: rgb(235, 235, 235);
+  grid-column: 2;
+  grid-row: 2;
+  padding: 20px;
+}
+
+.headshots {
+  width: 100px; /* you can use % */
+  height: auto;
+  padding-right: 10px;
+}
+
+.cast-info {
+  padding-bottom: 10px;
+}
+
+.similar {
+  /* second row, first column: similar movies list */
+  background-color: rgb(235, 235, 235);
+  grid-column: 1;
+  grid-row: 2;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
 }
